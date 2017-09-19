@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="SKRTEC BLOG">
 <meta property="og:description" content="Sorry, we cannot find your page. GO BACK     var c=document.getElementById(&quot;myCanvas&quot;);  var time = 160 ; //蛇的速度  var cxt=c.getContext(&quot;2d&quot;);  var x = y = 8;  var a = 0; //食物坐标  var t = 20; //舍身长  va">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-15T00:11:48.811Z">
+<meta property="og:updated_time" content="2017-09-19T07:44:18.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="404">
 <meta name="twitter:description" content="Sorry, we cannot find your page. GO BACK     var c=document.getElementById(&quot;myCanvas&quot;);  var time = 160 ; //蛇的速度  var cxt=c.getContext(&quot;2d&quot;);  var x = y = 8;  var a = 0; //食物坐标  var t = 20; //舍身长  va">
@@ -259,11 +259,11 @@ case 0:x = x-size;break;
 case 3:y = y+size;break; 
 } 
 if(x>400 || y>400 || x<0 || y<0){ 
-alert("You are dead.....");window.location.reload(); 
+window.location.reload(); 
 } 
 for(var i=0;i<map.length;i++){ 
 if( parseInt(map[i].x)==x && parseInt(map[i].y)==y){ 
-alert("You are dead.....");window.location.reload(); 
+window.location.reload(); 
 } 
 } 
 if (map.length>t) { //保持舍身长度 
