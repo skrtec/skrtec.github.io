@@ -87,17 +87,16 @@
 
 
 
-<meta name="description" content="Sorry, we cannot find your page. GO BACK     var c=document.getElementById(&quot;myCanvas&quot;);  var time = 160 ; //蛇的速度  var cxt=c.getContext(&quot;2d&quot;);  var x = y = 8;  var a = 0; //食物坐标  var t = 20; //舍身长  va">
+<meta name="description" content="SKRTEC is a blog about IT, fin-tech and music.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="404">
-<meta property="og:url" content="http://skrtec.github.io/404.html">
+<meta property="og:title" content="SKRTEC">
+<meta property="og:url" content="http://skrtec.github.io/tags/git-cloud-hexo-node-js-html-dns-markdown/index.html">
 <meta property="og:site_name" content="SKRTEC">
-<meta property="og:description" content="Sorry, we cannot find your page. GO BACK     var c=document.getElementById(&quot;myCanvas&quot;);  var time = 160 ; //蛇的速度  var cxt=c.getContext(&quot;2d&quot;);  var x = y = 8;  var a = 0; //食物坐标  var t = 20; //舍身长  va">
+<meta property="og:description" content="SKRTEC is a blog about IT, fin-tech and music.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-19T07:44:18.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404">
-<meta name="twitter:description" content="Sorry, we cannot find your page. GO BACK     var c=document.getElementById(&quot;myCanvas&quot;);  var time = 160 ; //蛇的速度  var cxt=c.getContext(&quot;2d&quot;);  var x = y = 8;  var a = 0; //食物坐标  var t = 20; //舍身长  va">
+<meta name="twitter:title" content="SKRTEC">
+<meta name="twitter:description" content="SKRTEC is a blog about IT, fin-tech and music.">
 
 
 
@@ -125,19 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://skrtec.github.io/404.html"/>
+  <link rel="canonical" href="http://skrtec.github.io/tags/git-cloud-hexo-node-js-html-dns-markdown/"/>
 
 
 
 
 
-  <title>
-  
-
-  
-    404 | SKRTEC
-  
-</title>
+  <title> 标签: git, cloud, hexo, node.js, html, dns, markdown | SKRTEC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -226,79 +219,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-  <header class="post-header">
-
-	<h1 class="post-title" itemprop="name headline">404</h1>
-
-
-
-</header>
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        git, cloud, hexo, node.js, html, dns, markdown
+        <small>标签</small>
+      </h2>
+    </div>
 
     
-    
-      <script src="\assets\js\APlayer.min.js"> </script><p>Sorry, we cannot find your page.</p>
-<p><a href="https://skrtec.github.io">GO BACK</a></p>
-<p><canvas id="myCanvas" width="400" height="400" style="border:1px solid #c3c3c3;"></canvas> </p>
-<script type="text/javascript"> 
-var c=document.getElementById("myCanvas"); 
-var time = 160 ; //蛇的速度 
-var cxt=c.getContext("2d"); 
-var x = y = 8; 
-var a = 0; //食物坐标 
-var t = 20; //舍身长 
-var map = []; //记录蛇运行路径 
-var size = 8; //蛇身单元大小 
-var direction = 2; // 1 向上 2 向右 0 左 3下 
-interval = window.setInterval(set_game_speed, time); // 移动蛇 
-function set_game_speed(){ // 移动蛇 
-switch(direction){ 
-case 1:y = y-size;break; 
-case 2:x = x+size;break; 
-case 0:x = x-size;break; 
-case 3:y = y+size;break; 
-} 
-if(x>400 || y>400 || x<0 || y<0){ 
-window.location.reload(); 
-} 
-for(var i=0;i<map.length;i++){ 
-if( parseInt(map[i].x)==x && parseInt(map[i].y)==y){ 
-window.location.reload(); 
-} 
-} 
-if (map.length>t) { //保持舍身长度 
-var cl = map.shift(); //删除数组第一项，并且返回原元素 
-cxt.clearRect(cl['x'], cl['y'], size, size); 
-}; 
-map.push({'x':x,'y':y}); //将数据添加到原数组尾部 
-cxt.fillStyle = "#006699";//内部填充颜色 
-cxt.strokeStyle = "#006699";//边框颜色 
-cxt.fillRect(x, y, size, size);//绘制矩形 
-if((a*8)==x && (a*8)==y){ //吃食物 
-rand_frog();t++; 
-} 
-} 
-document.onkeydown = function(e) { //改变蛇方向 
-var code = e.keyCode - 37; 
-switch(code){ 
-case 1 : direction = 1;break;//上 
-case 2 : direction = 2;break;//右 
-case 3 : direction = 3;break;//下 
-case 0 : direction = 0;break;//左 
-} 
-} 
-// 随机放置食物 
-function rand_frog(){ 
-a = Math.ceil(Math.random()*50); 
-cxt.fillStyle = "#000000";//内部填充颜色 
-cxt.strokeStyle = "#000000";//边框颜色 
-cxt.fillRect(a*8, a*8, 8, 8);//绘制矩形 
-} 
-// 随机放置食物 
-rand_frog(); 
-</script>  
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/posts/2017/09/从零开始搭博客教程.html" itemprop="url">
+              
+                <span itemprop="name">从零开始搭博客教程</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-09-20T22:08:50+08:00"
+              content="2017-09-20" >
+          09-20
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
     
   </div>
+
+  
 
 
           </div>
