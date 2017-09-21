@@ -1,547 +1,201 @@
-<!doctype html>
+---
+permalink: /404.html
+---
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		<title>HTML5 云朵效果</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css">
+		<style type="text/css">
+			body {
+				background-color: #326696;
+				margin: 0px;
+				overflow: hidden;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				font-weight: bold;
+				text-align:center;
+			}
+			a {
+				color:#0078ff;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="assets/three.min.js"></script>
+		<script type="text/javascript" src="assets/Detector.js"></script>
+		<script id="vs" type="x-shader/x-vertex">
 
+			varying vec2 vUv;
 
+			void main() {
 
-  
+				vUv = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
+			}
 
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		</script>
 
+		<script id="fs" type="x-shader/x-fragment">
 
+			uniform sampler2D map;
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+			uniform vec3 fogColor;
+			uniform float fogNear;
+			uniform float fogFar;
 
+			varying vec2 vUv;
 
+			void main() {
 
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+				float fogFactor = smoothstep( fogNear, fogFar, depth );
 
+				gl_FragColor = texture2D( map, vUv );
+				gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
 
+			}
 
+		</script>
 
+		<script type="text/javascript">
 
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
+			var container;
+			var camera, scene, renderer;
+			var mesh, geometry, material;
 
+			var mouseX = 0, mouseY = 0;
+			var start_time = Date.now();
 
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
 
+			init();
 
+			function init() {
 
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+				// Bg gradient
 
+				var canvas = document.createElement( 'canvas' );
+				canvas.width = 32;
+				canvas.height = window.innerHeight;
 
+				var context = canvas.getContext( '2d' );
 
+				var gradient = context.createLinearGradient( 0, 0, 0, canvas.height );
+				gradient.addColorStop(0, "#1e4877");
+				gradient.addColorStop(0.5, "#4584b4");
 
-  
-  
-  
-  
+				context.fillStyle = gradient;
+				context.fillRect(0, 0, canvas.width, canvas.height);
 
-  
-    
-    
-  
+				container.style.background = 'url(' + canvas.toDataURL('image/png') + ')';
+				container.style.backgroundSize = '32px 100%';
 
-  
+				//
 
-  
+				camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 3000 );
+				camera.position.z = 6000;
 
-  
+				scene = new THREE.Scene();
 
-  
+				geometry = new THREE.Geometry();
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+				var texture = THREE.ImageUtils.loadTexture( 'cloud10.png', null, animate );
+				texture.magFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter = THREE.LinearMipMapLinearFilter;
 
+				var fog = new THREE.Fog( 0x4584b4, - 100, 3000 );
 
+				material = new THREE.ShaderMaterial( {
 
+					uniforms: {
 
+						"map": { type: "t", value: texture },
+						"fogColor" : { type: "c", value: fog.color },
+						"fogNear" : { type: "f", value: fog.near },
+						"fogFar" : { type: "f", value: fog.far },
 
+					},
+					vertexShader: document.getElementById( 'vs' ).textContent,
+					fragmentShader: document.getElementById( 'fs' ).textContent,
+					depthWrite: false,
+					depthTest: false,
+					transparent: true
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+				} );
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 64, 64 ) );
 
+				for ( var i = 0; i < 8000; i++ ) {
 
-  <meta name="keywords" content="Hexo, NexT" />
+					plane.position.x = Math.random() * 1000 - 500;
+					plane.position.y = - Math.random() * Math.random() * 200 - 15;
+					plane.position.z = i;
+					plane.rotation.z = Math.random() * Math.PI;
+					plane.scale.x = plane.scale.y = Math.random() * Math.random() * 1.5 + 0.5;
 
+					THREE.GeometryUtils.merge( geometry, plane );
 
+				}
 
+				mesh = new THREE.Mesh( geometry, material );
+				scene.add( mesh );
 
+				mesh = new THREE.Mesh( geometry, material );
+				mesh.position.z = - 8000;
+				scene.add( mesh );
 
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
 
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
 
+			}
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+			function onDocumentMouseMove( event ) {
 
+				mouseX = ( event.clientX - windowHalfX ) * 0.25;
+				mouseY = ( event.clientY - windowHalfY ) * 0.15;
 
+			}
 
+			function onWindowResize( event ) {
 
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
 
+				renderer.setSize( window.innerWidth, window.innerHeight );
 
-<meta name="description" content="对不起，我们无法找到该页面，请返回。 返回上个页面 返回博客主页">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404">
-<meta property="og:url" content="http://skrtec.github.io/404.html">
-<meta property="og:site_name" content="SKRTEC 博客">
-<meta property="og:description" content="对不起，我们无法找到该页面，请返回。 返回上个页面 返回博客主页">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-20T21:34:41.339Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404">
-<meta name="twitter:description" content="对不起，我们无法找到该页面，请返回。 返回上个页面 返回博客主页">
+			}
 
+			function animate() {
 
+				requestAnimationFrame( animate );
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+				position = ( ( Date.now() - start_time ) * 0.03 ) % 8000;
 
+				camera.position.x += ( mouseX - camera.position.x ) * 0.01;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.01;
+				camera.position.z = - position + 8000;
 
+				renderer.render( scene, camera );
 
-  <link rel="canonical" href="http://skrtec.github.io/404.html"/>
+			}
 
-
-
-
-
-  <title>
-  
-
-  
-    404 | SKRTEC 博客
-  
-</title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left  ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">SKRTEC 博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-  <header class="post-header">
-
-	<h1 class="post-title" itemprop="name headline">404</h1>
-
-
-
-</header>
-
-    
-    
-      <script src="\assets\js\APlayer.min.js"> </script><p>对不起，我们无法找到该页面，请返回。</p>
-<p><a href="javascript:history.go(-1);" target="_blank" rel="external">返回上个页面</a></p>
-<p><a href="http://blog.shikeren.top/" target="_blank" rel="external">返回博客主页</a></p>
-
-    
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="SHIKEREN" />
-          <p class="site-author-name" itemprop="name">SHIKEREN</p>
-           
-              <p class="site-description motion-element" itemprop="description">一些关于科技，生活和娱乐的小文章。</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-star"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">SHIKEREN</span>
-</div>
-
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://skrtec-blog.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-
-  
-
-</body>
+		</script>
+	<script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script>
+	<script src="http://dreamsky.github.io/main/blog/common/init.js"></script>
+	</body>
 </html>
