@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="SKRTEC 博客">
 <meta property="og:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-22T23:35:51.514Z">
+<meta property="og:updated_time" content="2017-09-22T23:39:58.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
 <meta name="twitter:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。">
@@ -397,11 +397,7 @@
 <p>在 d:\myblog 内 Git Bash，一键安装所有依赖包：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
 <p>至此，Hexo 博客就搭建完了，是不是 so easy？</p>
-<h2 id="写一篇测试文章并在本地服务器上测试"><a href="#写一篇测试文章并在本地服务器上测试" class="headerlink" title="写一篇测试文章并在本地服务器上测试"></a>写一篇测试文章并在本地服务器上测试</h2><p>使用 Hexo 的 Server 指令将博客站点部署到本地服务器上。目前我们以自己的电脑作为站点发布的服务器，还不能被其他人访问到。在下一章我们搞定了托管服务后，就可以将网站发布到外部服务器上，被互联网所访问到。当然，你仍然可以随时使用这个指令来预览博客，作为每一次发布前的测试。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
-<p>小贴士：若不写 “4001” ，Hexo 将默认以 4000 作为端口，4000端口被占用的可能性比较大。若出现端口被占用无法正常浏览的情况，请将端口号换成任意另外一个其他数字即可。</p>
-<p>打开浏览器，访问 <a href="http://localhost:4001/" target="_blank" rel="external">http://localhost:4001/</a> ，看到你的 Hexo 博客了吗？</p>
-<p>博客初养成，赶紧撰写一篇测试文章吧！使用以下命令来新建一篇题为 “Test” 文章：</p>
+<h2 id="写一篇测试文章并在本地服务器上测试"><a href="#写一篇测试文章并在本地服务器上测试" class="headerlink" title="写一篇测试文章并在本地服务器上测试"></a>写一篇测试文章并在本地服务器上测试</h2><p>博客初养成，赶紧撰写一篇测试文章吧！使用以下命令来新建一篇题为 “Test” 文章：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new Test</div></pre></td></tr></table></figure>
 <p>当然，你也可以直接去默认的 ~\source\_posts 文件夹下直接新建 Test.md 文件，并用任何能处理文本文件的工具来查看和修改。</p>
 <p>在 Test.md 里面写上下面这段话，博文使用 Markdown 语言撰写，关于 MD 的语法、编辑器等等问题，在之后我们会有整整一个章节来介绍。目前，您只需要直接复制如下文本到 Test.md 内。</p>
@@ -413,9 +409,12 @@
 <ul>
 <li>我很懒，我要直接下载 <a href="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-1-Test.md" target="_blank" rel="external">Test.md</a> ！</li>
 </ul>
-<p>使用 Hexo 的 Generate 指令，来自动将各种元件组装成网页</p>
+<p>使用 Hexo 的 Generate 指令，来自动将各种元件组装成网页。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
-<p>再重复一次上面的本地服务器发布 （hexo s -p 4001）即可看到发布了测试文章的博客网站。</p>
+<p>使用 Hexo 的 Server 指令将博客站点部署到本地服务器上。目前我们以自己的电脑作为站点发布的服务器，还不能被其他人访问到。在下一章我们搞定了托管服务后，就可以将网站发布到外部服务器上，被互联网所访问到。当然，你仍然可以随时使用这个指令来预览博客，作为每一次发布前的测试。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
+<p>小贴士：若不写 “4001” ，Hexo 将默认以 4000 作为端口，4000端口被占用的可能性比较大。若出现端口被占用无法正常浏览的情况，请将端口号换成任意另外一个其他数字即可。</p>
+<p>打开浏览器，访问 <a href="http://localhost:4001/" target="_blank" rel="external">http://localhost:4001/</a> 或 <a href="http://127.0.0.1:4001/，看到你的" target="_blank" rel="external">http://127.0.0.1:4001/，看到你的</a> Hexo 博客了吗？</p>
 <h2 id="教程导航"><a href="#教程导航" class="headerlink" title="教程导航"></a>教程导航</h2><p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-0.html" target="_blank" rel="external">HEOXO 静态博客教程（序）</a></p>
 <p>HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</p>
 <p>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</p>
