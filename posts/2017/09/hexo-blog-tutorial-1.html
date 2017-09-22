@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="在序章中我们提到，让博客上线运行，最少只需要两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。">
+<meta name="description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git">
 <meta name="keywords" content="git,hexo,html,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
 <meta property="og:url" content="http://skrtec.github.io/posts/2017/09/hexo-blog-tutorial-1.html">
 <meta property="og:site_name" content="SKRTEC 博客">
-<meta property="og:description" content="在序章中我们提到，让博客上线运行，最少只需要两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。">
+<meta property="og:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-22T19:16:17.124Z">
+<meta property="og:updated_time" content="2017-09-22T22:32:26.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
-<meta name="twitter:description" content="在序章中我们提到，让博客上线运行，最少只需要两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。">
+<meta name="twitter:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git">
 
 
 
@@ -371,36 +371,51 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>在序章中我们提到，让博客上线运行，最少只需要两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git</p>
 <a id="more"></a>
-<h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>Hexo 是一个快速、简洁且高效的博客框架，它需要 Node.js 作为运行环境，请先在电脑中安装 Node.js。请根据自己电脑的 32位/64位 架构来选择对应的 Node.js 版本。</p>
+<h2 id="安装-Node-js-和-Git"><a href="#安装-Node-js-和-Git" class="headerlink" title="安装 Node.js 和 Git"></a>安装 Node.js 和 Git</h2><p>Hexo 是一个快速、简洁且高效的博客框架，它需要 Node.js 和 Git 作为运行环境，请根据自己电脑的 32位/64位 架构来选择对应的版本。</p>
 <p>Node.js 官方下载页面： <a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">https://nodejs.org/zh-cn/</a></p>
-<p>在安装过程中，建议您勾选 添加到系统变量环境（Add to PATH）选项，这将允许您在系统命令行 CMD 中直接使用 npm 命令。若未勾选，您也可以在 CMD 中指定路径来运行 npm，或随时将其添加到PATH。</p>
-<h2 id="使用-npm-命令快速安装-Hexo"><a href="#使用-npm-命令快速安装-Hexo" class="headerlink" title="使用 npm 命令快速安装 Hexo"></a>使用 npm 命令快速安装 Hexo</h2><p> 打开 cmd, PowerShell 或 GitBash (其他平台使用终端即可)。</p>
-<p>若您已将 npm 添加到 PATH，直接使用以下命令即可：</p>
+<ul>
+<li>建议勾选 Add to PATH</li>
+</ul>
+<p>git 官方下载页面 <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
+<ul>
+<li>勾选 Git Bash Here </li>
+<li>选择 Use Git from the Windows Command Prompt</li>
+<li>其他设置可以全部使用默认</li>
+</ul>
+<p>上述建议将允许 node.js 和 git 指令添加到系统变量环境，这将允许您在命令行中直接调用它们的指令。若未勾选，您也可以在通过指定路径来运行，或随时将其添加到PATH。若您勾选了 Git Bash Here, 在下文任何需要命令行的地方，都可以通过在任意文件夹右键使用 Git Bash Here，即可在当前路径打开 Git 命令行窗口，也是十分的方便。</p>
+<h2 id="使用-npm-命令快速安装-Hexo"><a href="#使用-npm-命令快速安装-Hexo" class="headerlink" title="使用 npm 命令快速安装 Hexo"></a>使用 npm 命令快速安装 Hexo</h2><p> Git Bash Here (或系统命令行、终端)。</p>
+<p>使用以下命令即可：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<p>若 npm 命令不可用，请先 cd 到 npm 的路径，再使用上述命令即可。</p>
-<h2 id="建立-Hexo-本地站点"><a href="#建立-Hexo-本地站点" class="headerlink" title="建立 Hexo 本地站点"></a>建立 Hexo 本地站点</h2><p>在你希望存放 Hexo 站点文件的地方（比如 D:\myBlog) 打开命令行，先使用以下指令建站：（若无特殊说明，以后的指令都默认在博客文件夹内执行）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
-<p>再一键安装所有依赖包：</p>
+<ul>
+<li>若 npm 命令不可用，请先 cd 到 npm 的路径，再使用上述命令即可。</li>
+<li>-g 参数表示全局安装，因此您使用 Git Bash 的位置是无所谓的。</li>
+</ul>
+<h2 id="建立-Hexo-本地站点"><a href="#建立-Hexo-本地站点" class="headerlink" title="建立 Hexo 本地站点"></a>建立 Hexo 本地站点</h2><p>在你希望存放 Hexo 站点文件夹的地方（比如 d:\) Git Bash，先使用以下指令建站，这会在当前目录下创建一个名为 myblog 的文件夹：（若无特殊说明，以后的指令都默认在博客文件夹内执行，在这个例子中，即 d:\myblog）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init myblog</div></pre></td></tr></table></figure>
+<p>在 d:\myblog 内 Git Bash，一键安装所有依赖包：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
-<p>至此，Hexo 博客的本地文件就已经全部创建完毕了，是不是 so easy？</p>
-<h2 id="写一篇测试文章并在本地服务器上测试"><a href="#写一篇测试文章并在本地服务器上测试" class="headerlink" title="写一篇测试文章并在本地服务器上测试"></a>写一篇测试文章并在本地服务器上测试</h2><p>赶紧撰写一篇测试文章来检查 Hexo 建站是否成功吧！使用以下命令来新建一篇题为 “Test” 文章：</p>
+<p>至此，Hexo 博客就搭建完了，是不是 so easy？</p>
+<h2 id="写一篇测试文章并在本地服务器上测试"><a href="#写一篇测试文章并在本地服务器上测试" class="headerlink" title="写一篇测试文章并在本地服务器上测试"></a>写一篇测试文章并在本地服务器上测试</h2><p>使用 Hexo 的 Server 指令将博客站点部署到本地服务器上。目前我们以自己的电脑作为站点发布的服务器，还不能被其他人访问到。在下一章我们搞定了托管服务后，就可以将网站发布到外部服务器上，被互联网所访问到。当然，你仍然可以随时使用这个指令来预览博客，作为每一次发布前的测试。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
+<p>小贴士：若不写 “4001” ，Hexo 将默认以 4000 作为端口，4000端口被占用的可能性比较大。若出现端口被占用无法正常浏览的情况，请将端口号换成任意另外一个其他数字即可。</p>
+<p>打开浏览器，访问 <a href="http://localhost:4001/" target="_blank" rel="external">http://localhost:4001/</a> ，看到你的 Hexo 博客了吗？</p>
+<p>博客初养成，赶紧撰写一篇测试文章吧！使用以下命令来新建一篇题为 “Test” 文章：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new Test</div></pre></td></tr></table></figure>
 <p>当然，你也可以直接去默认的 ~\source\_posts 文件夹下直接新建 Test.md 文件，并用任何能处理文本文件的工具来查看和修改。</p>
-<p>在里面写上下面这段话，之后可以使用 Hexo 指令快速生成对应的网页文件。博文使用 Markdown 语言撰写，关于 MD 的语法、编辑器等等问题，在之后我们会有整整一个章节来介绍。目前，您只需要直接复制如下文本到 Test.md 内。</p>
+<p>在 Test.md 里面写上下面这段话，博文使用 Markdown 语言撰写，关于 MD 的语法、编辑器等等问题，在之后我们会有整整一个章节来介绍。目前，您只需要直接复制如下文本到 Test.md 内。</p>
 <blockquote>
 <p>---</p>
 <p>title: Test<br>date: 2017-09-22 19:37:34<br>---</p>
 <p>这是一篇测试文章。 Hello World!</p>
 </blockquote>
-<p><del>我很懒，我要直接下载</del> <a href="http://owojnyr9l.bkt.clouddn.com/Test.md" target="_blank" rel="external">Test.md</a> ！</p>
+<ul>
+<li>我很懒，我要直接下载 <a href="http://owojnyr9l.bkt.clouddn.com/Test.md" target="_blank" rel="external">Test.md</a> ！</li>
+</ul>
 <p>使用 Hexo 的 Generate 指令，来自动将各种元件组装成网页</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
-<p>使用 Hexo 的 Server 指令将博客站点部署到本地服务器上。目前我们以自己的电脑作为站点发布的服务器，还不能被其他人访问到。在下一章我们搞定了托管服务后，就可以将网站发布到外部服务器上，被互联网所访问到。当然，你仍然可以随时使用这个指令来预览博客，作为每一次发布前的测试。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
-<p>小贴士：若不写 “4001” ，Hexo 将默认以 4000 作为端口，4000端口被占用的可能性比较大。若出现端口被占用无法正常浏览的情况，请将端口号换成任意另外一个其他数字即可。</p>
-<p>最后，打开浏览器，访问 <a href="http://localhost:4001/" target="_blank" rel="external">http://localhost:4001/</a> ，看到你的 Hexo 博客了吗？</p>
+<p>再重复一次上面的本地服务器发布 （hexo s -p 4001）即可看到发布了测试文章的博客网站。</p>
 <h2 id="教程导航"><a href="#教程导航" class="headerlink" title="教程导航"></a>教程导航</h2><p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-0.html" target="_blank" rel="external">HEOXO 静态博客教程（序）</a></p>
 <p>HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</p>
 <p>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</p>
@@ -408,6 +423,9 @@
 <p>HEXO静态博客教程（四）：Markdown 写作指南和编辑器推荐</p>
 <p>HEXO静态博客教程（五）：用插件点缀你的 HEXO 吧</p>
 <p>HEXO静态博客教程（六）：域名注册+DNS 打造属于自己的域名博客</p>
+<h2 id="参考说明"><a href="#参考说明" class="headerlink" title="参考说明"></a>参考说明</h2><ul>
+<li>Hexo 官方文档 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></li>
+</ul>
 
       
     </div>
@@ -600,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">1.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-npm-命令快速安装-Hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 npm 命令快速安装 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立-Hexo-本地站点"><span class="nav-number">3.</span> <span class="nav-text">建立 Hexo 本地站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写一篇测试文章并在本地服务器上测试"><span class="nav-number">4.</span> <span class="nav-text">写一篇测试文章并在本地服务器上测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程导航"><span class="nav-number">5.</span> <span class="nav-text">教程导航</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node-js-和-Git"><span class="nav-number">1.</span> <span class="nav-text">安装 Node.js 和 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-npm-命令快速安装-Hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 npm 命令快速安装 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立-Hexo-本地站点"><span class="nav-number">3.</span> <span class="nav-text">建立 Hexo 本地站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写一篇测试文章并在本地服务器上测试"><span class="nav-number">4.</span> <span class="nav-text">写一篇测试文章并在本地服务器上测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程导航"><span class="nav-number">5.</span> <span class="nav-text">教程导航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考说明"><span class="nav-number">6.</span> <span class="nav-text">参考说明</span></a></li></ol></div>
             
 
           </div>
