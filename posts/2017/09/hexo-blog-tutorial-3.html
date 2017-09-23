@@ -87,18 +87,20 @@
 
 
 
-<meta name="description" content="在本地博客文件+服务器托管完成后，博客就算正式上线运行了。我们还需要掌握一定的博客管理维护技巧，才能进行正常的发帖、修改、删帖等动作。这一章节将主要围绕 Hexo 常用指令、 Hexo 站点配置和主题配置来展开。">
+<meta name="description" content="在本地博客文件+服务器托管完成后，您就完成了建站的基础工作，博客就算正式上线运行了。但是一篇文章，从 idea 到发布到博客，需要经历怎样的过程呢？我该如何去定制博客的方方面面？这一章节将主要围绕 Hexo 常用指令、定制博客信息 、Hexo 站点配置和主题配置等来展开。进阶教程的篇幅将比基础篇长一些，请您善用小标题索引来快速找到所需的信息。">
 <meta name="keywords" content="git,hexo,html,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维(进阶篇)">
 <meta property="og:url" content="http://skrtec.github.io/posts/2017/09/hexo-blog-tutorial-3.html">
 <meta property="og:site_name" content="SKRTEC 博客">
-<meta property="og:description" content="在本地博客文件+服务器托管完成后，博客就算正式上线运行了。我们还需要掌握一定的博客管理维护技巧，才能进行正常的发帖、修改、删帖等动作。这一章节将主要围绕 Hexo 常用指令、 Hexo 站点配置和主题配置来展开。">
+<meta property="og:description" content="在本地博客文件+服务器托管完成后，您就完成了建站的基础工作，博客就算正式上线运行了。但是一篇文章，从 idea 到发布到博客，需要经历怎样的过程呢？我该如何去定制博客的方方面面？这一章节将主要围绕 Hexo 常用指令、定制博客信息 、Hexo 站点配置和主题配置等来展开。进阶教程的篇幅将比基础篇长一些，请您善用小标题索引来快速找到所需的信息。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-23T12:07:12.170Z">
+<meta property="og:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-3/pic-1.PNG">
+<meta property="og:updated_time" content="2017-09-23T14:11:24.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维(进阶篇)">
-<meta name="twitter:description" content="在本地博客文件+服务器托管完成后，博客就算正式上线运行了。我们还需要掌握一定的博客管理维护技巧，才能进行正常的发帖、修改、删帖等动作。这一章节将主要围绕 Hexo 常用指令、 Hexo 站点配置和主题配置来展开。">
+<meta name="twitter:description" content="在本地博客文件+服务器托管完成后，您就完成了建站的基础工作，博客就算正式上线运行了。但是一篇文章，从 idea 到发布到博客，需要经历怎样的过程呢？我该如何去定制博客的方方面面？这一章节将主要围绕 Hexo 常用指令、定制博客信息 、Hexo 站点配置和主题配置等来展开。进阶教程的篇幅将比基础篇长一些，请您善用小标题索引来快速找到所需的信息。">
+<meta name="twitter:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-3/pic-1.PNG">
 
 
 
@@ -371,18 +373,18 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>在本地博客文件+服务器托管完成后，博客就算正式上线运行了。我们还需要掌握一定的博客管理维护技巧，才能进行正常的发帖、修改、删帖等动作。这一章节将主要围绕 Hexo 常用指令、 Hexo 站点配置和主题配置来展开。</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>在本地博客文件+服务器托管完成后，您就完成了建站的基础工作，博客就算正式上线运行了。但是一篇文章，从 idea 到发布到博客，需要经历怎样的过程呢？我该如何去定制博客的方方面面？这一章节将主要围绕 Hexo 常用指令、定制博客信息 、Hexo 站点配置和主题配置等来展开。进阶教程的篇幅将比基础篇长一些，请您善用小标题索引来快速找到所需的信息。</p>
 <a id="more"></a>
 <h2 id="一篇博文的旅程"><a href="#一篇博文的旅程" class="headerlink" title="一篇博文的旅程"></a>一篇博文的旅程</h2><ol>
-<li><p>Markdown 语言写出一个内容文件 article.md。</p>
+<li><p>Markdown 语言写出一个内容文件 <code>article.md</code>。</p>
 </li>
-<li><p>（可选）清除缓存文件 （ db.json）和已生成的静态文件 （public）。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<li><p>（可选）清除缓存文件 （ db.json）和已生成的静态文件 （public）。通常，在 <code>hexo g</code> 前之前使用该清除命令是个好习惯，但一般可以不用。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
 </li>
-<li><p>Hexo 把 source 文件夹里的博客内容、样式、图片、媒体等整合为一个 网页文件html，并且按照预设的分类（Categories)、标签(Tags)等自动归档到不同的文件夹里。所有将发布的博客内容，即 public 这个文件夹内的内容。</p>
+<li><p>Hexo 把 <code>source</code> 文件夹里的博客内容、样式、图片、媒体等整合为一个 网页文件 html，并且按照预设的分类（Categories)、标签（Tags）等自动归档到不同的文件夹里。所有将发布的博客内容，即 public 这个文件夹内的内容。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
 </li>
-<li><p>（可选）在本地 <a href="http://localhost:4001" target="_blank" rel="external">http://localhost:4001</a> 预览发布结果。</p>
+<li><p>（可选）在本地 <code>http://localhost:4001</code> 预览发布结果。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
 </li>
 <li><p>提交代码到服务器</p>
@@ -430,10 +432,52 @@
 </tr>
 </tbody>
 </table>
+<h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>在博客安装的根目录下的站点配置文件 <code>\_config.yml</code> 是使用 YAML 语言写的。我们不会 YAML，但没关系，系统自带的记事本就可以进行编辑。若您想使用一款功能比较强大的轻量级编辑器，可以参考下方的文章；若有选择恐惧症，建议选择和我一样的 <a href="https://notepad-plus-plus.org/download" target="_blank" rel="external">Notepad++</a> 即可。</p>
+<ul>
+<li><p>10个常用的代码文本编辑器/ IDE（知乎专栏 - 路人甲）</p>
+<p><a href="https://zhuanlan.zhihu.com/p/21434126/" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/21434126/</a></p>
+</li>
+<li><p>推荐15款很棒的文本编辑器（开源中国社区 - 红薯）</p>
+<p><a href="http://www.oschina.net/news/17858/15-best-text-editors/" target="_blank" rel="external">http://www.oschina.net/news/17858/15-best-text-editors/</a></p>
+</li>
+</ul>
+<p>下面即是我自己的站点配置文件，相关解释直接写在文本注释中。需要注意以下几点：</p>
+<ul>
+<li>以 “#” 开头的即为注释，被注释掉的文本将不被执行。你可以通过注释掉某一行，来关闭某个功能。</li>
+</ul>
+<ul>
+<li>每个参数后面是一个冒号，紧跟着一个空格，然后才是参数值，比如 <code>title: SKRTEC 博客</code>。</li>
+<li>符号应一律使用英文半角。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Hexo Configuration 站点配置</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html Hexo文档地址</span></div><div class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/ Hexo项目地址</span></div><div class="line"></div><div class="line"><span class="comment"># Site 站点信息</span></div><div class="line"><span class="attr">title:</span> <span class="string">SKRTEC</span> <span class="string">博客</span>   <span class="comment">#博客名称</span></div><div class="line"><span class="attr">subtitle:</span>            <span class="comment">#副标题</span></div><div class="line"><span class="attr">description:</span> <span class="string">一些关于科技，生活和娱乐的小文章。</span>     <span class="comment">#站点描述</span></div><div class="line"><span class="attr">author:</span> <span class="string">SHIKEREN</span>      <span class="comment">#作者</span></div><div class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>       <span class="comment">#站点语言（这通常由主题配置文件来控制）</span></div><div class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment">#时区</span></div><div class="line"></div><div class="line"><span class="comment"># URL 地址</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="comment"># 如果你的站点存放在次级目录下，按上述说明设置路径</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://skrtec.github.io</span>   <span class="comment">#填写你的博客托管地址</span></div><div class="line"><span class="attr">root:</span> <span class="string">/</span>              </div><div class="line"><span class="attr">permalink:</span> <span class="string">posts/:year/:month/:title.html</span>  <span class="comment">#文章的url规则</span></div><div class="line"><span class="attr">permalink_defaults:</span></div><div class="line"></div><div class="line"><span class="comment"># Directory #文件夹</span></div><div class="line"><span class="attr">source_dir:</span> <span class="string">source</span>    <span class="comment">#存放博客资源的文件夹名</span></div><div class="line"><span class="attr">public_dir:</span> <span class="string">public</span>    <span class="comment">#存放静态文件的文件夹名</span></div><div class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span>         <span class="comment">#按标签归类文章的文件夹名</span></div><div class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span>  <span class="comment">#文章归档</span></div><div class="line"><span class="attr">category_dir:</span> <span class="string">categories</span>   <span class="comment">#按分类归类文章的文件夹名</span></div><div class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span>  </div><div class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></div><div class="line"><span class="attr">skip_render:</span> <span class="string">_unpost/**</span>   <span class="comment">#跳过处理的文件名和文件夹名</span></div><div class="line"></div><div class="line"><span class="comment"># Writing #写作</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> </div><div class="line"><span class="comment">#文章自动命名的规则，同上面的url规则，你可以自己确定文件名而不遵循此规则</span></div><div class="line"><span class="attr">default_layout:</span> <span class="string">post</span>   <span class="comment">#发布的文章默认存放位置</span></div><div class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">#是否开启标题自动大写功能</span></div><div class="line"><span class="attr">external_link:</span> <span class="literal">true</span></div><div class="line"><span class="attr">filename_case:</span> <span class="number">0</span></div><div class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span>  <span class="comment">#是否开启渲染草稿功能</span></div><div class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span></div><div class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></div><div class="line"><span class="attr">future:</span> <span class="literal">false</span></div><div class="line"><span class="attr">highlight:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  tab_replace:</span></div><div class="line">  </div><div class="line"><span class="comment"># Home page setting 主页设置</span></div><div class="line"><span class="comment"># path: Root path for your blogs index page. (default = '')</span></div><div class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></div><div class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></div><div class="line"><span class="attr">index_generator:</span></div><div class="line"><span class="attr">  path:</span> <span class="string">''</span></div><div class="line"><span class="attr">  per_page:</span> <span class="number">10</span>  <span class="comment">#主页显示的文章数</span></div><div class="line"><span class="attr">  order_by:</span> <span class="bullet">-date</span>   <span class="comment">#排序方式：日期倒序</span></div><div class="line">  </div><div class="line"><span class="comment"># Category &amp; Tag  #类别和标签</span></div><div class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span>  <span class="comment">#文章的默认类别</span></div><div class="line"><span class="attr">category_map:</span>        <span class="comment">#类别导航页地址</span></div><div class="line"><span class="attr">tag_map:</span>            <span class="comment">#标签导航页地址</span></div><div class="line"></div><div class="line"><span class="comment"># Date / Time format  #日期时间格式</span></div><div class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="comment">## You can customize the date format as defined in</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line"><span class="comment"># 你可以去上面那个地址找到 Hexo 自定义日期时间格式的语法</span></div><div class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span></div><div class="line"><span class="attr">time_format:</span> <span class="attr">HH:mm:ss</span></div><div class="line"></div><div class="line"><span class="comment"># Pagination  分页</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination </span></div><div class="line"><span class="comment"># 设置为0则为关闭分页功能</span></div><div class="line"><span class="attr">per_page:</span> <span class="number">10</span>    <span class="comment">#每页文章数</span></div><div class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span></div><div class="line"></div><div class="line"><span class="comment"># Extensions  #扩展插件</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/  插件浏览</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/   主题浏览</span></div><div class="line"><span class="attr">theme:</span> <span class="string">next</span>   <span class="comment">#目前使用的主题名</span></div><div class="line"></div><div class="line"><span class="comment"># Deployment   #站点部署</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repository:</span> </div><div class="line"><span class="attr">    github:</span> <span class="attr">https://github.com/skrtec/skrtec.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><h3 id="挑选并下载一款主题"><a href="#挑选并下载一款主题" class="headerlink" title="挑选并下载一款主题"></a>挑选并下载一款主题</h3><p>Hexo 默认的主题并不是很好看，接下来我们去物色一款喜欢的主题。这边给您带来了一些参考网页。</p>
+<ul>
+<li><p>Hexo 官网主题浏览：</p>
+<p><a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
+</li>
+<li><p>知乎 - 有哪些好看的 Hexo 主题？– 家顺张的回答：</p>
+<p><a href="https://www.zhihu.com/question/24422335/answer/46357100" target="_blank" rel="external">https://www.zhihu.com/question/24422335/answer/46357100</a></p>
+</li>
+</ul>
+<p>例如，本站目前使用的是 Next 主题，制作者是 iissnan，这是目前最受欢迎的主题。主题配色以黑白灰为主，分区明快，线条简洁。功能上，内置多语言支持、文本高亮、标签书写。这是目前集成第三方库最完善的主题之一（即在主题配置文件里就可以快速引用插件），包括评论系统、访问量统计分析、内容分享、内置搜索、公式排版等。如果你目前还不知道选择什么主题，可以暂时先使用 Next 来学习如何配置主题，今后更换也十分简单。</p>
+<ul>
+<li><p>hexo-next 官网：</p>
+<p><a href="http://theme-next.iissnan.com" target="_blank" rel="external">http://theme-next.iissnan.com</a></p>
+</li>
+<li><p>hexo-next 发布页面（稳定版本下载）：</p>
+<p><a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next/releases</a></p>
+</li>
+</ul>
+<p>在发布页面找到 Download Source Code，将源码包下载并解压到自己的博客文件夹 <code>~\themes\</code>下即可，如下图所示。<code>next</code> 文件夹打开后应该直接就是各种文件。</p>
+<p><img src="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-3/pic-1.PNG" alt="pic-1"></p>
+<p>去上面所讲的站点配置文件里，将 <code>theme</code>字段的值改成和上图黄色标注文件夹一样的名字即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">theme:</span> <span class="string">next</span></div></pre></td></tr></table></figure>
+<h2 id="参考说明"><a href="#参考说明" class="headerlink" title="参考说明"></a>参考说明</h2><p>Hexo 官网文档：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
+<p>Hexo-Next 主题官方网站：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a></p>
 <h2 id="教程导航"><a href="#教程导航" class="headerlink" title="教程导航"></a>教程导航</h2><p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-0.html" target="_blank" rel="external">HEOXO 静态博客教程（序）</a></p>
 <p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-1.html" target="_blank" rel="external">HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</a></p>
 <p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-2.html" target="_blank" rel="external">HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</a></p>
-<p>HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维(进阶篇)</p>
+<p>HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇)</p>
 <p>HEXO静态博客教程（四）：Markdown 写作指南和编辑器推荐</p>
 <p>HEXO静态博客教程（五）：用插件点缀你的 HEXO 吧</p>
 <p>HEXO静态博客教程（六）：域名注册+DNS 打造属于自己的域名博客</p>
@@ -629,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一篇博文的旅程"><span class="nav-number">1.</span> <span class="nav-text">一篇博文的旅程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用-Hexo-指令"><span class="nav-number">2.</span> <span class="nav-text">常用 Hexo 指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程导航"><span class="nav-number">3.</span> <span class="nav-text">教程导航</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一篇博文的旅程"><span class="nav-number">1.</span> <span class="nav-text">一篇博文的旅程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用-Hexo-指令"><span class="nav-number">2.</span> <span class="nav-text">常用 Hexo 指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站点配置"><span class="nav-number">3.</span> <span class="nav-text">站点配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置"><span class="nav-number">4.</span> <span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#挑选并下载一款主题"><span class="nav-number">4.1.</span> <span class="nav-text">挑选并下载一款主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考说明"><span class="nav-number">5.</span> <span class="nav-text">参考说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程导航"><span class="nav-number">6.</span> <span class="nav-text">教程导航</span></a></li></ol></div>
             
 
           </div>
