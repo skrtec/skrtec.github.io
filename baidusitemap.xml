@@ -51,12 +51,12 @@
 
     
   <url>
-    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html</loc>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-0.html</loc>
     <lastmod>2017-09-25T04:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</title>
-        <pubTime>2017-09-22T16:30:34.000Z</pubTime>
+        <title>HEOXO 静态博客教程（序）</title>
+        <pubTime>2017-09-20T14:08:50.000Z</pubTime>
         
         <tag>blog</tag>
          
@@ -75,12 +75,12 @@
 
     
   <url>
-    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-0.html</loc>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html</loc>
     <lastmod>2017-09-25T04:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>HEOXO 静态博客教程（序）</title>
-        <pubTime>2017-09-20T14:08:50.000Z</pubTime>
+        <title>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</title>
+        <pubTime>2017-09-22T16:30:34.000Z</pubTime>
         
         <tag>blog</tag>
          
