@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog,hexo,markdown," />
+  <meta name="keywords" content="博客,Hexo,Git,GitHub," />
 
 
 
@@ -87,21 +87,21 @@
 
 
 
-<meta name="description" content="上一章节中我们已经在本地建立了完整的博客系统，下一步要做的就是找一家提供网页托管的厂商来存放我们的博客。目前 GitHub、  Coding.net（原 GitCafe）、 七牛云、GitLab 等都提供免费的静态页面托管服务。这里我们以 GitHub Pages 为例，毕竟它是程序猿界的 Facebook 。其他网站的处理方式是几乎完全一样的，您可以自己尝试。 在最后的扩展教程里，我们还会展示如">
-<meta name="keywords" content="blog,hexo,markdown">
+<meta name="description" content="上一章已经在本地建立了完整的博客系统，下一步只需要将其托管到一个服务器上。目前 GitHub、  Coding.net（GitCafe）、 七牛云、GitLab 等都提供免费的静态托管服务。这里我们以 GitHub Pages 为例，其他供应商的处理方法是几乎一样的，您可以自己尝试。">
+<meta name="keywords" content="博客,Hexo,Git,GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）">
 <meta property="og:url" content="http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html">
 <meta property="og:site_name" content="SKRTEC 博客">
-<meta property="og:description" content="上一章节中我们已经在本地建立了完整的博客系统，下一步要做的就是找一家提供网页托管的厂商来存放我们的博客。目前 GitHub、  Coding.net（原 GitCafe）、 七牛云、GitLab 等都提供免费的静态页面托管服务。这里我们以 GitHub Pages 为例，毕竟它是程序猿界的 Facebook 。其他网站的处理方式是几乎完全一样的，您可以自己尝试。 在最后的扩展教程里，我们还会展示如">
+<meta property="og:description" content="上一章已经在本地建立了完整的博客系统，下一步只需要将其托管到一个服务器上。目前 GitHub、  Coding.net（GitCafe）、 七牛云、GitLab 等都提供免费的静态托管服务。这里我们以 GitHub Pages 为例，其他供应商的处理方法是几乎一样的，您可以自己尝试。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-1.PNG">
 <meta property="og:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-2.PNG">
 <meta property="og:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-3.PNG">
-<meta property="og:updated_time" content="2017-09-25T04:00:00.000Z">
+<meta property="og:updated_time" content="2017-09-27T14:45:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）">
-<meta name="twitter:description" content="上一章节中我们已经在本地建立了完整的博客系统，下一步要做的就是找一家提供网页托管的厂商来存放我们的博客。目前 GitHub、  Coding.net（原 GitCafe）、 七牛云、GitLab 等都提供免费的静态页面托管服务。这里我们以 GitHub Pages 为例，毕竟它是程序猿界的 Facebook 。其他网站的处理方式是几乎完全一样的，您可以自己尝试。 在最后的扩展教程里，我们还会展示如">
+<meta name="twitter:description" content="上一章已经在本地建立了完整的博客系统，下一步只需要将其托管到一个服务器上。目前 GitHub、  Coding.net（GitCafe）、 七牛云、GitLab 等都提供免费的静态托管服务。这里我们以 GitHub Pages 为例，其他供应商的处理方法是几乎一样的，您可以自己尝试。">
 <meta name="twitter:image" content="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-1.PNG">
 
 
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-25T06:00:00+02:00">
-                2017-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-27T16:45:33+02:00">
+                2017-09-27
               </time>
             
           </span>
@@ -338,6 +338,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/IT/" itemprop="url" rel="index">
                     <span itemprop="name">IT</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IT/博客搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">博客搭建</span>
                   </a>
                 </span>
 
@@ -371,16 +382,15 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>上一章节中我们已经在本地建立了完整的博客系统，下一步要做的就是找一家提供网页托管的厂商来存放我们的博客。目前 GitHub、  Coding.net（原 GitCafe）、 七牛云、GitLab 等都提供免费的静态页面托管服务。这里我们以 GitHub Pages 为例，<del>毕竟它是程序猿界的 Facebook</del> 。其他网站的处理方式是几乎完全一样的，您可以自己尝试。</p>
-<p>在最后的扩展教程里，我们还会展示如何将自己的博客同时部署到多个托管网站（镜像站点），但访问他们都只需要同样的域名；并根据用户线路，使用 DNS 将其指向不同的镜像，加快不同区域访问博客的速度。</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>上一章已经在本地建立了完整的博客系统，下一步只需要将其托管到一个服务器上。目前 GitHub、  Coding.net（GitCafe）、 七牛云、GitLab 等都提供免费的静态托管服务。这里我们以 GitHub Pages 为例，其他供应商的处理方法是几乎一样的，您可以自己尝试。</p>
 <a id="more"></a>
 <h2 id="创建一个-GitHub-账号"><a href="#创建一个-GitHub-账号" class="headerlink" title="创建一个 GitHub 账号"></a>创建一个 GitHub 账号</h2><p>在 GitHub 网站注册一个账号 <a href="https://github.com/join" target="_blank" rel="external">https://github.com/join</a></p>
-<p>这应该非常容易，记得取一个骚气的名字！值得一提的是， GitHub 有且仅有英文界面。Coding.net 是模仿 GitHub的中文站点，在中国的访问速度远快于后者，有这方面需求的您可以使用 Coding.net。</p>
+<p>这应该非常容易，记得取一个骚气的名字！值得一提的是， GitHub 有且仅有英文界面。Coding.net 是仿 GitHub的中文站点，在中国的访问速度远快于后者，有这方面需求的您可以使用 Coding.net。</p>
 <h2 id="创建一个代码仓库"><a href="#创建一个代码仓库" class="headerlink" title="创建一个代码仓库"></a>创建一个代码仓库</h2><p>我们需要创建一个项目仓库来专门存放博客文件。点击 New Repository 来创建一个新的仓库，名称必须是 <code>&lt;你的GitHub名字&gt;.github.io</code>，比如 <code>skrtec.github.io</code>。</p>
 <p><img src="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-1.PNG" alt="pic-1"></p>
 <p>选择 Public 选项，仓库内容对所有人可见，否则别人看不到你的网页。</p>
 <p><code>README</code> ，<code>\.gitignore</code> 和 <code>license</code> 不需要添加，完成创建即可。</p>
-<h2 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h2><p>为什么需要配置 SSH 密钥呢？因为我们今后文件的上传都是批量的，总不能每次都打开网页版来上传吧。前一章的 Git Bash 只需要一个命令就可以完成对我们在 GitHub 里文件的更新。因此，需要一把密钥来对双方进行认证，保证 git 操作的安全性。</p>
+<h2 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h2><p>为什么需要配置 SSH 密钥呢？因为我们今后文件的上传都是批量的，总不能每次都打开网页版来上传吧。前一章的 Git Bash 只需要一个命令就可以完成对我们在 GitHub 里文件的更新。因此，需要一把密钥来对双方进行认证，保证安全性。</p>
 <p>先找到我们的 ssh 文件夹，win系统通常在 <code>&lt;user&gt;\.ssh</code>。当然更简单的方法就是在 Git Bash 里使用如下两条命令。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh</div><div class="line">ls</div></pre></td></tr></table></figure>
 <p>如果显示你已经有密钥文件在里面，那么可以跳过下一步的生成密钥，直接去后面的提交公钥部分。如果显示没有密钥，使用你自己的邮箱来生成一个密钥。</p>
@@ -388,11 +398,8 @@
 <ul>
 <li>推荐的做法是一路回车到完成。中间会出现让你输入密码，这个密码的作用是每次提交文件到 GitHub 的时候让你输入这个密码来认证（不是 GitHub 的密码）。推荐不输，这样可以直接提交代码。</li>
 </ul>
-<p>在 GitHub网站的 Settings - SSH and GPG keys （ <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a> ）里创建一个 New SSH Key，Title 任意。打开电脑上 <code>&lt;user&gt;\.ssh</code> 文件夹找到后缀为 <code>.pub</code> 的公钥，用记事本打开复制里面的内容并且贴到Key里面去。</p>
+<p>在 GitHub网站的 Settings - SSH and GPG keys （ <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a> ）里创建一个 New SSH Key，Title 任意。打开电脑上 <code>&lt;user&gt;\.ssh</code> 文件夹找到后缀为 <code>.pub</code> 的公钥，用记事本打开复制里面的内容并且贴到Key里面去。记住上传是 <code>.pub</code> 的公钥里的内容，另外一个私钥永远是存在自己机器上的。</p>
 <p><img src="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-2/pic-2.PNG" alt="pic-2"></p>
-<ul>
-<li>记住上传是 <code>.pub</code> 的公钥，私钥永远是存在自己机器上的。</li>
-</ul>
 <p>完成这一操作后，使用如下指令来测试 SSH 是否配置成功。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
 <p>中间 GitHub 会有一个警告，输入 <code>yes</code> 回车，继续。</p>
@@ -409,14 +416,13 @@
 </li>
 </ul>
 <h2 id="发布博客到托管服务器"><a href="#发布博客到托管服务器" class="headerlink" title="发布博客到托管服务器"></a>发布博客到托管服务器</h2><p>最后的最后，在 Git Bash 里依次使用以下三个命令，即可发布博客到托管服务器。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo d</div><div class="line">hexo g</div></pre></td></tr></table></figure>
-<ul>
-<li>这三条指令的作用分别是，<code>hexo clean</code> 清除本地 public 发布文件夹，<code>hexo g</code> 在本地生成发布文件夹 public，<code>hexo d</code> 将 public 发布到 GitHub Pages。关于 hexo 指令的详细介绍，在接下来的教程中会出现，敬请关注。</li>
-</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>这三条指令的作用分别是，<code>hexo clean</code> 清除本地 public 静态文件，<code>hexo g</code> 在本地生成静态文件 public，<code>hexo d</code> 将 public 发布到 GitHub Pages。</p>
+<p>你可以将上面的 <code>hexo g</code> 和 <code>hexo d</code> 合并为一条指令 <code>hexo g -d</code> 或者 <code>hexo d -g</code>。关于 Hexo 指令的详细介绍，在接下来的教程中会出现，敬请关注。</p>
 <p>浏览器访问 <code>https://&lt;GitHub用户名&gt;.github.io</code>，就可以看到这个博客了。</p>
 <ul>
-<li><p>我不喜欢这个地址，我可以使用类似 XXXXX.com 的网址来访问我的博客吗？</p>
-<p>可以的，你将需要注册一个域名+配置 DNS，后面会有专门一篇文章讲述如何做到这一切。</p>
+<li><p>我不喜欢这个地址，我可以使用类似 myName.com 的网址来访问我的博客吗？</p>
+<p>可以的，你需要注册一个域名+配置 DNS，在后面会有专门一篇文章介绍如何做到这一切。</p>
 </li>
 </ul>
 <h2 id="参考说明"><a href="#参考说明" class="headerlink" title="参考说明"></a>参考说明</h2><p>破男孩 - github 设置 ssh：</p>
@@ -452,11 +458,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag"># blog</a>
+            <a href="/tags/博客/" rel="tag"># 博客</a>
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
           
         </div>
       
@@ -469,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/zh-CN/hexo-blog-tutorial-1.html" rel="next" title="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
-                <i class="fa fa-chevron-left"></i> HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）
+              <a href="/zh-CN/hexo-blog-tutorial-1.html" rel="next" title="HEXO 基础博客教程：博客系统的本地搭建">
+                <i class="fa fa-chevron-left"></i> HEXO 基础博客教程：博客系统的本地搭建
               </a>
             
           </div>
@@ -479,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/zh-CN/hexo-blog-tutorial-3.html" rel="prev" title="HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇）">
-                HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇） <i class="fa fa-chevron-right"></i>
+              <a href="/zh-CN/milktea-maker.html" rel="prev" title="10分钟自制美味奶茶">
+                10分钟自制美味奶茶 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -553,7 +561,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -564,7 +572,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -575,7 +583,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
