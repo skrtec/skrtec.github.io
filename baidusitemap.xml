@@ -6,6 +6,38 @@
     
     
   <url>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-0.html</loc>
+    <lastmod>2017-09-27T13:38:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>HEOXO 博客教程（导航页）</title>
+        <pubTime>2017-09-20T14:08:50.000Z</pubTime>
+        
+        <tag>博客</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>Markdown</tag>
+         
+        <tag>Git</tag>
+         
+        <tag>GitHub</tag>
+         
+        <tag>域名</tag>
+         
+        <tag>DNS</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.shikeren.top/zh-CN/milktea-maker.html</loc>
     <lastmod>2017-09-26T10:41:36.000Z</lastmod>
     <data>
@@ -28,12 +60,12 @@
 
     
   <url>
-    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-0.html</loc>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html</loc>
     <lastmod>2017-09-25T04:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>HEOXO 静态博客教程（序）</title>
-        <pubTime>2017-09-20T14:08:50.000Z</pubTime>
+        <title>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</title>
+        <pubTime>2017-09-22T16:30:34.000Z</pubTime>
         
         <tag>blog</tag>
          
@@ -58,30 +90,6 @@
         <display>
         <title>HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</title>
         <pubTime>2017-09-22T11:37:34.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html</loc>
-    <lastmod>2017-09-25T04:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</title>
-        <pubTime>2017-09-22T16:30:34.000Z</pubTime>
         
         <tag>blog</tag>
          
