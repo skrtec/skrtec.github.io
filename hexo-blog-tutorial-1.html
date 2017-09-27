@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="美食,奶茶," />
+  <meta name="keywords" content="blog,hexo,markdown," />
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="博主目前正在国外读研，每当夜深人静的时刻（九点才天黑），我就默默在书桌前坐下，开始一天干活效率最高的那几个小时。每当这时，就会无比想念国内的一种饮料——奶茶！没有奶茶，就像火箭没有燃料，这是不能忍的。 于是我掏出一口小煮锅，用10分钟的时间做了一锅飘香的奶茶，就是最基础、最经典的原味红茶奶茶，而这真的是非常、非常、非常的，简单。">
-<meta name="keywords" content="美食,奶茶">
+<meta name="description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。">
+<meta name="keywords" content="blog,hexo,markdown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10分钟自制美味奶茶">
-<meta property="og:url" content="http://skrtec.github.io/posts/2017/09/milktea-maker.html">
+<meta property="og:title" content="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
+<meta property="og:url" content="http://blog.shikeren.top/hexo-blog-tutorial-1.html">
 <meta property="og:site_name" content="SKRTEC 博客">
-<meta property="og:description" content="博主目前正在国外读研，每当夜深人静的时刻（九点才天黑），我就默默在书桌前坐下，开始一天干活效率最高的那几个小时。每当这时，就会无比想念国内的一种饮料——奶茶！没有奶茶，就像火箭没有燃料，这是不能忍的。 于是我掏出一口小煮锅，用10分钟的时间做了一锅飘香的奶茶，就是最基础、最经典的原味红茶奶茶，而这真的是非常、非常、非常的，简单。">
+<meta property="og:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-26T10:41:36.000Z">
+<meta property="og:updated_time" content="2017-09-25T04:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10分钟自制美味奶茶">
-<meta name="twitter:description" content="博主目前正在国外读研，每当夜深人静的时刻（九点才天黑），我就默默在书桌前坐下，开始一天干活效率最高的那几个小时。每当这时，就会无比想念国内的一种饮料——奶茶！没有奶茶，就像火箭没有燃料，这是不能忍的。 于是我掏出一口小煮锅，用10分钟的时间做了一锅飘香的奶茶，就是最基础、最经典的原味红茶奶茶，而这真的是非常、非常、非常的，简单。">
+<meta name="twitter:title" content="HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）">
+<meta name="twitter:description" content="在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://skrtec.github.io/posts/2017/09/milktea-maker.html"/>
+  <link rel="canonical" href="http://blog.shikeren.top/hexo-blog-tutorial-1.html"/>
 
 
 
 
 
-  <title> 10分钟自制美味奶茶 | SKRTEC 博客 </title>
+  <title> HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇） | SKRTEC 博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -261,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://skrtec.github.io/posts/2017/09/milktea-maker.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.shikeren.top/hexo-blog-tutorial-1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SHIKEREN">
@@ -282,7 +282,7 @@
             
             
               
-                10分钟自制美味奶茶
+                HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）
               
             
           </h1>
@@ -297,13 +297,25 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T12:41:36+02:00">
-                2017-09-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T13:37:34+02:00">
+                2017-09-22
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-25T06:00:00+02:00">
+                2017-09-25
+              </time>
             
           </span>
 
@@ -320,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
+                  <a href="/categories/IT/" itemprop="url" rel="index">
+                    <span itemprop="name">IT</span>
                   </a>
                 </span>
 
@@ -338,9 +350,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/2017/09/milktea-maker.html#comments" itemprop="discussionUrl">
+                <a href="/hexo-blog-tutorial-1.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="posts/2017/09/milktea-maker.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="hexo-blog-tutorial-1.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,56 +383,54 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>博主目前正在国外读研，每当夜深人静的时刻<del>（九点才天黑）</del>，我就默默在书桌前坐下，开始一天干活效率最高的那几个小时。每当这时，就会无比想念国内的一种饮料——奶茶！没有奶茶，就像火箭没有燃料，这是不能忍的。</p>
-<p>于是我掏出一口小煮锅，用10分钟的时间做了一锅飘香的奶茶，就是最基础、最经典的原味红茶奶茶，而这真的是非常、非常、非常的，简单。</p>
+        <script src="\assets\js\APlayer.min.js"> </script><p>在序章中我们提到，让博客上线运行，最少只两大步：本地环境搭建+上传到托管站点。这一节中我们具体介绍如何在自己的电脑上用 Hexo 快速搭建一个博客系统。您将需要的工具有 Node.js 和 Git。</p>
 <a id="more"></a>
-<p>博主今天做奶茶忘记拍照，下次做的时候补上！</p>
-<h2 id="准备事项"><a href="#准备事项" class="headerlink" title="准备事项"></a>准备事项</h2><p>以下数量大概是 2/5 锅奶茶（我的锅子粗略估计内径 17 cm，内高 9 cm），约 800 毫升。可以依据口味自行调整，味道都还可以，亲测。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>平底煮锅</td>
-<td>1 口</td>
-</tr>
-<tr>
-<td>红茶（任意牌子红茶或立顿茶包）</td>
-<td>10 - 20 克 或 1 - 2 小包</td>
-</tr>
-<tr>
-<td>纯牛奶（冷鲜奶味道较好）</td>
-<td>200 毫升</td>
-</tr>
-<tr>
-<td>糖（白砂糖或冰糖）</td>
-<td>依据口味</td>
-</tr>
-</tbody>
-</table>
-<h2 id="奶茶制作"><a href="#奶茶制作" class="headerlink" title="奶茶制作"></a>奶茶制作</h2><h3 id="烧水至沸腾约-3-分钟"><a href="#烧水至沸腾约-3-分钟" class="headerlink" title="烧水至沸腾约 3 分钟"></a>烧水至沸腾约 3 分钟</h3><p>用锅烧 600 毫升水至接近沸腾。</p>
+<h2 id="安装-Node-js-和-Git"><a href="#安装-Node-js-和-Git" class="headerlink" title="安装 Node.js 和 Git"></a>安装 Node.js 和 Git</h2><p>Hexo 是一个快速、简洁且高效的博客框架，它需要 Node.js 和 Git 作为运行环境，请根据自己电脑的 32位/64位 架构来选择对应的版本。</p>
+<p>Node.js 官方下载页面： <a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">https://nodejs.org/zh-cn/</a></p>
 <ul>
-<li>后面茶奶比例大致在 3：1 到 4：1 即可，看你喜欢茶味浓一点还是奶味浓一点。</li>
+<li>建议勾选 Add to PATH</li>
 </ul>
-<h3 id="煮茶约-4-分钟"><a href="#煮茶约-4-分钟" class="headerlink" title="煮茶约 4 分钟"></a>煮茶约 4 分钟</h3><p>把红茶丢进去，中小火煮 3 - 5 分钟。</p>
+<p>Git 官方下载页面： <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
 <ul>
-<li>如果你用的是好一点的散红茶，味道可能会好一点，但是需要把红茶包起来煮或者煮完过滤掉，所以懒人建议直接用红茶包。</li>
-<li>你可以随时尝一下茶汤，时间太短茶味太淡，时间长了会发苦。</li>
+<li>勾选 Git Bash Here </li>
+<li>选择 Use Git from the Windows Command Prompt</li>
+<li>其他设置可以全部使用默认</li>
 </ul>
-<h3 id="加牛奶煮约-3-分钟"><a href="#加牛奶煮约-3-分钟" class="headerlink" title="加牛奶煮约 3 分钟"></a>加牛奶煮约 3 分钟</h3><p>将 200 毫升牛奶加入茶汤继续中小火煮约 3 分钟至有明显奶茶香味，不需要煮沸，</p>
+<p>上述建议将允许 Node.js 和 Git 指令添加到系统变量环境，这将允许您在命令行中直接调用它们的指令。若未勾选，您也可以在通过指定路径来运行，或随时将其添加到 PATH。若您勾选了 Git Bash Here, 在下文任何需要命令行的地方，都可以通过在任意文件夹右键使用 Git Bash Here，即可在当前路径打开 Git 命令行窗口，也是十分的方便。</p>
+<h2 id="使用-npm-命令快速安装-Hexo"><a href="#使用-npm-命令快速安装-Hexo" class="headerlink" title="使用 npm 命令快速安装 Hexo"></a>使用 npm 命令快速安装 Hexo</h2><p> Git Bash Here (或系统命令行、终端)。</p>
+<p>使用以下命令即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
 <ul>
-<li>加热牛奶温度不宜过高，脂肪和蛋白质会形成奶皮，影响外观和口感。博主第一次煮出来上层有一些油状花纹，应该就是脂肪。</li>
-<li>加热过的牛奶比冰牛奶口感好，所以在煮茶的时候可以先用微波炉加热一下牛奶。温度不宜过高，会结皮，中火 45 秒左右差不多。</li>
+<li>若 <code>npm</code> 命令不可用，请先 <code>cd</code> 到 npm 的路径，再使用上述命令即可。</li>
+<li><code>-g</code> 参数表示全局安装，因此您使用 Git Bash 的位置是无所谓的。</li>
 </ul>
-<h3 id="加糖出锅享用"><a href="#加糖出锅享用" class="headerlink" title="加糖出锅享用"></a>加糖出锅享用</h3><p>按照个人口味加入糖及其他物料（珍珠、布丁之类的）。奶茶表面可能会有少量一些茶叶残渣、牛奶的脂肪、泡沫等，用勺子撇去。然后出锅享用吧， ENJOY !</p>
-<h2 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h2><ul>
-<li>奶茶热量很高，容易导致发胖，建议偶尔引用，并且尽量少加奶糖。</li>
-<li>牛奶选用半脱脂奶或脱脂奶，可以减少脂肪凝结，增加奶茶颜值。</li>
+<h2 id="建立-Hexo-本地站点"><a href="#建立-Hexo-本地站点" class="headerlink" title="建立 Hexo 本地站点"></a>建立 Hexo 本地站点</h2><p>在你希望存放 Hexo 站点文件夹的地方，比如 <code>d:\</code> , 右键 Git Bash，先使用以下指令建站，这会在当前目录下创建一个名为 <code>myblog</code> 的文件夹：（若无特殊说明，以后的指令都默认在博客文件夹内执行，在这个例子中，即 <code>d:\myblog</code>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init myblog</div></pre></td></tr></table></figure>
+<p>在 <code>d:\myblog</code> 内 Git Bash，一键安装所有依赖包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>至此，Hexo 博客就搭建完了，是不是 so easy？</p>
+<h2 id="写一篇测试文章并在本地服务器上测试"><a href="#写一篇测试文章并在本地服务器上测试" class="headerlink" title="写一篇测试文章并在本地服务器上测试"></a>写一篇测试文章并在本地服务器上测试</h2><p>博客初养成，赶紧撰写一篇测试文章吧！使用以下命令来新建一篇题为 “Test” 文章：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new Test</div></pre></td></tr></table></figure>
+<p>当然，你也可以直接去默认的 <code>\source\_posts</code> 文件夹下直接新建 <code>Test.md</code> 文件，并用任何能处理文本文件的工具来查看和修改。</p>
+<p>在 <code>Test.md</code> 里面写上下面这段话，博文使用 Markdown 语言撰写，关于 MD 的语法、编辑器等等问题，在之后我们会有整整一个章节来介绍。目前，您只需要直接复制如下文本到 <code>Test.md</code> 内。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Test</div><div class="line">date: 2017-09-22 19:37:34</div><div class="line">---</div><div class="line"></div><div class="line">这是一篇测试文章。 Hello World!</div></pre></td></tr></table></figure>
+<ul>
+<li>我很懒，我要直接下载 <a href="http://owojnyr9l.bkt.clouddn.com/hexo-blog-tutorial-1/Test.md" target="_blank" rel="external">Test.md</a> ！</li>
 </ul>
+<p>使用 Hexo 的 Generate 指令，来自动将各种元件组装成网页。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
+<p>使用 Hexo 的 Server 指令将博客站点部署到本地服务器上。目前我们以自己的电脑作为站点发布的服务器，还不能被其他人访问到。在下一章我们搞定了托管服务后，就可以将网站发布到外部服务器上，被互联网所访问到。当然，你仍然可以随时使用这个指令来预览博客，作为每一次发布前的测试。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -p 4001</div></pre></td></tr></table></figure>
+<p>小贴士：若不写 “4001” ，Hexo 将默认以 4000 作为端口，4000端口被占用的可能性比较大。若出现端口被占用无法正常浏览的情况，请将端口号换成任意另外一个其他数字即可。</p>
+<p>打开浏览器，访问 <code>http://localhost:4001/</code> 或 <code>http://127.0.0.1:4001/</code>，看到你的 Hexo 博客了吗？</p>
+<h2 id="参考说明"><a href="#参考说明" class="headerlink" title="参考说明"></a>参考说明</h2><p>Hexo 官方文档： <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
+<h2 id="教程导航"><a href="#教程导航" class="headerlink" title="教程导航"></a>教程导航</h2><p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-0.html">HEXO 静态博客教程（序）</a></p>
+<p>HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</p>
+<p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-2.html">HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</a></p>
+<p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-3.html">HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇)</a></p>
+<p><a href="http://blog.shikeren.top/posts/2017/09/hexo-blog-tutorial-4.html">HEXO 静态博客教程（四）：Markdown 写作指南和编辑器推荐</a></p>
+<p>HEXO 静态博客教程（五）：用插件点缀你的 HEXO 吧</p>
+<p>HEXO 静态博客教程（六）：域名注册+DNS 打造属于自己的域名博客</p>
 
       
     </div>
@@ -450,9 +460,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/美食/" rel="tag"># 美食</a>
+            <a href="/tags/blog/" rel="tag"># blog</a>
           
-            <a href="/tags/奶茶/" rel="tag"># 奶茶</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
           
         </div>
       
@@ -465,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/2017/09/hexo-blog-tutorial-3.html" rel="next" title="HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇）">
-                <i class="fa fa-chevron-left"></i> HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇）
+              <a href="/hexo-blog-tutorial-0.html" rel="next" title="HEOXO 静态博客教程（序）">
+                <i class="fa fa-chevron-left"></i> HEOXO 静态博客教程（序）
               </a>
             
           </div>
@@ -474,6 +486,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo-blog-tutorial-2.html" rel="prev" title="HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）">
+                HEXO 静态博客教程（二）：将博客托管到服务器（基础篇） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -609,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备事项"><span class="nav-number">1.</span> <span class="nav-text">准备事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#奶茶制作"><span class="nav-number">2.</span> <span class="nav-text">奶茶制作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#烧水至沸腾约-3-分钟"><span class="nav-number">2.1.</span> <span class="nav-text">烧水至沸腾约 3 分钟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#煮茶约-4-分钟"><span class="nav-number">2.2.</span> <span class="nav-text">煮茶约 4 分钟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加牛奶煮约-3-分钟"><span class="nav-number">2.3.</span> <span class="nav-text">加牛奶煮约 3 分钟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加糖出锅享用"><span class="nav-number">2.4.</span> <span class="nav-text">加糖出锅享用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小贴士"><span class="nav-number">3.</span> <span class="nav-text">小贴士</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node-js-和-Git"><span class="nav-number">1.</span> <span class="nav-text">安装 Node.js 和 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-npm-命令快速安装-Hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 npm 命令快速安装 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立-Hexo-本地站点"><span class="nav-number">3.</span> <span class="nav-text">建立 Hexo 本地站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写一篇测试文章并在本地服务器上测试"><span class="nav-number">4.</span> <span class="nav-text">写一篇测试文章并在本地服务器上测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考说明"><span class="nav-number">5.</span> <span class="nav-text">参考说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#教程导航"><span class="nav-number">6.</span> <span class="nav-text">教程导航</span></a></li></ol></div>
             
 
           </div>
@@ -645,12 +661,6 @@
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
   
 
   
@@ -762,9 +772,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://skrtec.github.io/posts/2017/09/milktea-maker.html';
-          this.page.identifier = 'posts/2017/09/milktea-maker.html';
-          this.page.title = '10分钟自制美味奶茶';
+          this.page.url = 'http://blog.shikeren.top/hexo-blog-tutorial-1.html';
+          this.page.identifier = 'hexo-blog-tutorial-1.html';
+          this.page.title = 'HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://skrtec-blog.disqus.com/embed.js';
