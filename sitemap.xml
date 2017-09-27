@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.shikeren.top/categories/index.html</loc>
+    
+    <lastmod>2017-09-27T19:22:08.735Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.shikeren.top/tags/index.html</loc>
     
-    <lastmod>2017-09-27T19:16:10.429Z</lastmod>
+    <lastmod>2017-09-27T19:21:48.669Z</lastmod>
     
   </url>
   
