@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.shikeren.top/zh-CN/milktea-maker.html</loc>
+    <lastmod>2017-09-26T10:41:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>10分钟自制美味奶茶</title>
+        <pubTime>2017-09-26T10:41:36.000Z</pubTime>
+        
+        <tag>美食</tag>
+         
+        <tag>奶茶</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://blog.shikeren.top/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-1.html</loc>
+    <lastmod>2017-09-25T04:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>HEXO 静态博客教程（一）：HEXO 本地环境搭建（基础篇）</title>
+        <pubTime>2017-09-22T11:37:34.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-0.html</loc>
+    <lastmod>2017-09-25T04:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>HEOXO 静态博客教程（序）</title>
+        <pubTime>2017-09-20T14:08:50.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-2.html</loc>
+    <lastmod>2017-09-25T04:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>HEXO 静态博客教程（二）：将博客托管到服务器（基础篇）</title>
+        <pubTime>2017-09-22T16:30:34.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.shikeren.top/zh-CN/hexo-blog-tutorial-3.html</loc>
+    <lastmod>2017-09-25T04:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>HEXO 静态博客教程（三）：HEXO 博客 DIY 和日常运维（进阶篇）</title>
+        <pubTime>2017-09-23T05:24:34.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="IT" url="http://blog.shikeren.top/categories/IT/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
