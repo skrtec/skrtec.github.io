@@ -12,5 +12,5 @@ Disallow: /vendors/
 Disallow: /fancybox
 Disallow: /404.html
 
-Sitemap: http://blog.shikeren.top/sitemap.xml
-Sitemap: http://blog.shikeren.top/baidusitemap.xml
+Sitemap: http://www.shikeren.top/sitemap.xml
+Sitemap: http://www.shikeren.top/baidusitemap.xml
